@@ -6,10 +6,10 @@ function addJsonData(jsonObj) {
 }
 
 function downloadJsonData() {
-    let loghead = "id,score,hitNum,hitRate\n";
+    let loghead = "id,score,hitNum,hitRatio\n";
     let logdata = "";
     datas.map(function (d) {
-        logdata += d.id + "," + d.score + "," + d.hit_num + "," + d.hit_rate + "\n";
+        logdata += d.id + "," + d.score + "," + d.hitNum + "," + d.hitRatio + "\n";
     });
 
     const filename = getNow() + ".csv";
