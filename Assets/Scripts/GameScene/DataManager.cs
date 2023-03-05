@@ -18,7 +18,7 @@ public class DataManager : MonoBehaviour
     {
         public int score;
         public int hitNum;
-        public float hitRate;
+        public float hitRatio;
     }
 
     public void postData(int score, int hitCount, int triggerCount)
@@ -26,8 +26,8 @@ public class DataManager : MonoBehaviour
         Data data = new Data();
         data.score = score;
         data.hitNum = hitCount;
-        data.hitRate = (float)hitCount / (float)triggerCount;
-        Debug.Log("score: " + data.score + ", hitNum: " + data.hitNum + ", hitRate: " + data.hitRate);
+        data.hitRatio = (float)hitCount / (float)triggerCount;
+        Debug.Log("score: " + data.score + ", hitNum: " + data.hitNum + ", hitRatio: " + data.hitRatio);
         string json = JsonUtility.ToJson(data);
 #if UNITY_WEBGL && !UNITY_EDITOR
         addData(json);
