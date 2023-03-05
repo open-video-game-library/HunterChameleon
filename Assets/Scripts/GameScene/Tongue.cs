@@ -6,7 +6,7 @@ public class Tongue : MonoBehaviour
 {
     [SerializeField]
     private SpriteRenderer tongueSpriteRenderer;
-    private float tongueSpeed;
+    private int tongueSpeed;
 
     private bool isShooting;
 
@@ -67,7 +67,7 @@ public class Tongue : MonoBehaviour
             {
                 if (!isReached)
                 {
-                    scaleY += tongueSpeed;
+                    scaleY += tongueSpeed * Time.deltaTime;
                     if (scaleY >= distance)
                     {
                         isReached = true;
@@ -76,7 +76,7 @@ public class Tongue : MonoBehaviour
                 }
                 else
                 {
-                    scaleY -= tongueSpeed;
+                    scaleY -= tongueSpeed * Time.deltaTime;
                     if (scaleY <= 0.5f)
                     {
                         isShooting = false;

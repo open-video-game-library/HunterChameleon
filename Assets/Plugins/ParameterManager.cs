@@ -11,7 +11,7 @@ public class ParameterManager : MonoBehaviour
     public static int tongueColorBlue = 229;
     public static int tongueColorAlpha = 255;
 
-    public static float tongueSpeed = 0.1f;
+    public static int tongueSpeed = 100;
 
     public static int flySpeed = 5;
     public static float appleGravityScale = 0.5f;
