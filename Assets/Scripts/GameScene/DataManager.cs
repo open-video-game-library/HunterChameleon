@@ -27,6 +27,7 @@ public class DataManager : MonoBehaviour
         data.score = score;
         data.hitNum = hitCount;
         data.hitRate = (float)hitCount / (float)triggerCount;
+        Debug.Log("score: " + data.score + ", hitNum: " + data.hitNum + ", hitRate: " + data.hitRate);
         string json = JsonUtility.ToJson(data);
 #if UNITY_WEBGL && !UNITY_EDITOR
         addData(json);
