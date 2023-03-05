@@ -11,7 +11,7 @@ public class Fly : MonoBehaviour
     private string flyType;
     private Vector3 direction;
     
-    public float speed;
+    public int speed;
 
     void Start() 
     {
@@ -21,7 +21,7 @@ public class Fly : MonoBehaviour
 
     void LateUpdate()
     {
-        this.transform.localPosition += direction * speed;
+        this.transform.localPosition += direction * speed * Time.deltaTime;
         if (flyType == "toLeftWave" || flyType == "toRightWave")
         {
             var temp = transform.localPosition;

@@ -14,13 +14,13 @@ public class AppleSpeedSlider : MonoBehaviour
 
     void Start()
     {
-        valueText.text = slider.value.ToString("f2");
-        slider.value = float.Parse(ParameterManager.appleGravityScale.ToString("f2")); 
+        valueText.text = slider.value.ToString("f1");
+        slider.value = float.Parse(ParameterManager.appleGravityScale.ToString("f1")); 
     }
 
     public void OnChanged ()
     {
-        valueText.text = slider.value.ToString("f2");
-        ParameterManager.appleGravityScale = float.Parse(slider.value.ToString("f2"));
+        valueText.text = slider.value.ToString("f1");
+        ParameterManager.appleGravityScale = float.Parse(slider.value.ToString("f1"));
     }
 }

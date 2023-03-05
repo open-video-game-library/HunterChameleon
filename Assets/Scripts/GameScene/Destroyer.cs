@@ -9,7 +9,7 @@ public class Destroyer : MonoBehaviour
     
     private bool isElapsed;
 
-    private int maxTime = 10;
+    private int maxTime = 30;
 
     public void StartDestroyTimer()
     {

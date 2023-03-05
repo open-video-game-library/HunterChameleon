@@ -14,13 +14,13 @@ public class FlySpeedSlider : MonoBehaviour
 
     void Start()
     {
-        valueText.text = slider.value.ToString("f3");
-        slider.value = float.Parse(ParameterManager.flySpeed.ToString("f3")); 
+        valueText.text = slider.value.ToString("f0");
+        slider.value = int.Parse(ParameterManager.flySpeed.ToString("f0")); 
     }
 
     public void OnChanged ()
     {
-        valueText.text = slider.value.ToString("f3");
-        ParameterManager.flySpeed = float.Parse(slider.value.ToString("f3"));
+        valueText.text = slider.value.ToString("f0");
+        ParameterManager.flySpeed = int.Parse(slider.value.ToString("f0"));
     }
 }
