@@ -6,14 +6,14 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     [System.NonSerialized]
-    public int score;
+    public int scoreNum;
 
     [SerializeField]
     private TextMeshProUGUI scoreText;
 
     void Start()
     {
-        score = 0;
+        scoreNum = 0;
     }
 
     void Update()
@@ -23,8 +23,8 @@ public class Score : MonoBehaviour
 
     public void AddScore(int addedScore)
     {
-        score += addedScore;
-        scoreText.text = "SCORE: " + score.ToString();
+        scoreNum += addedScore;
+        scoreText.text = "SCORE: " + scoreNum.ToString();
     }
 
     public IEnumerator makeTextDamaged()

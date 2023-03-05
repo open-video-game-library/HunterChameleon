@@ -10,6 +10,9 @@ public class Reticle : MonoBehaviour
     [SerializeField]
     private SpriteRenderer reticleSpriteRenderer;
 
+    [System.NonSerialized]
+    public int triggerNum;
+
     void Start()
     {
         Cursor.visible = false;
@@ -31,6 +34,14 @@ public class Reticle : MonoBehaviour
             Vector3 temp = transform.position;
             temp.z = 0;
             StartCoroutine(tongue.Shoot(temp));
+        }
+    }
+
+    void LateUpdate ()
+    {
+        if (TimeKeeper.isPlaying && Input.GetMouseButtonDown(0))
+        {
+            triggerNum++;
         }
     }
 }

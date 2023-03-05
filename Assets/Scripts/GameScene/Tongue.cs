@@ -30,6 +30,9 @@ public class Tongue : MonoBehaviour
     [SerializeField]
     private Sprite[] judges = new Sprite[4];
 
+    [System.NonSerialized]
+    public int hitNum;
+
     void Start()
     {
         tongueSpriteRenderer.color = new Color32(
@@ -99,6 +102,8 @@ public class Tongue : MonoBehaviour
 
         if(collidedObject.activeSelf && collidedObject.CompareTag("Target"))
         {
+            hitNum++;
+            
             Vector3 collidedPosition = collidedObject.transform.position;
             collidedPosition.z = 1.0f;
 

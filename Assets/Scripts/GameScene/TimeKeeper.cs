@@ -24,6 +24,16 @@ public class TimeKeeper : MonoBehaviour
     [SerializeField]
     private GameObject bgm;
 
+    // データ管理
+    [SerializeField]
+    private DataManager dataManager;
+    [SerializeField]
+    private Score score;
+    [SerializeField]
+    private Reticle reticle;
+    [SerializeField]
+    private Tongue tongue;
+
     void Start()
     {
         isPlaying = false;
@@ -67,5 +77,6 @@ public class TimeKeeper : MonoBehaviour
     {
         isPlaying = false;
         targetManager.StopSpawn();
+        dataManager.postData(score.scoreNum, tongue.hitNum, reticle.triggerNum);
     }
 }
