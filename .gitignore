@@ -25,6 +25,7 @@ ExportedObj/
 *.svd
 *.csv
 *.mp4
+*.sh
 .idea/**/workspace.xml
 .idea/**/projectSettingsUpdater.xml
 .idea/**/indexLayout.xml
