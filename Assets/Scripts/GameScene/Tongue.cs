@@ -35,13 +35,7 @@ public class Tongue : MonoBehaviour
 
     void Start()
     {
-        tongueSpriteRenderer.color = new Color32(
-            (byte)ParameterManager.tongueColorRed, 
-            (byte)ParameterManager.tongueColorGreen, 
-            (byte)ParameterManager.tongueColorBlue,
-            (byte)ParameterManager.tongueColorAlpha
-        );
-        tongueSpeed = ParameterManager.tongueSpeed;
+        Init();
         
         isShooting = false;
 
@@ -155,5 +149,16 @@ public class Tongue : MonoBehaviour
         float dy = to.y - from.y;
         float rad = Mathf.Atan2(dy, dx);
         return rad * Mathf.Rad2Deg;
+    }
+
+    public void Init()
+    {
+        tongueSpriteRenderer.color = new Color32(
+            (byte)ParameterManager.tongueColorRed, 
+            (byte)ParameterManager.tongueColorGreen, 
+            (byte)ParameterManager.tongueColorBlue,
+            (byte)ParameterManager.tongueColorAlpha
+        );
+        tongueSpeed = ParameterManager.tongueSpeed;
     }
 }

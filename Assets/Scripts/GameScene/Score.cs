@@ -13,12 +13,7 @@ public class Score : MonoBehaviour
 
     void Start()
     {
-        scoreNum = 0;
-    }
-
-    void Update()
-    {
-        
+        Init();
     }
 
     public void AddScore(int addedScore)
@@ -33,5 +28,11 @@ public class Score : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         scoreText.color = Color.white;
         yield break;
+    }
+
+    public void Init ()
+    {
+        scoreNum = 0;
+        scoreText.text = "SCORE: " + scoreNum.ToString();
     }
 }

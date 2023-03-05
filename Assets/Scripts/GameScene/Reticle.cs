@@ -16,12 +16,7 @@ public class Reticle : MonoBehaviour
     void Start()
     {
         Cursor.visible = false;
-        reticleSpriteRenderer.color = new Color32(
-            (byte)ParameterManager.tongueColorRed, 
-            (byte)ParameterManager.tongueColorGreen, 
-            (byte)ParameterManager.tongueColorBlue,
-            (byte)ParameterManager.tongueColorAlpha
-        );
+        this.Init();
     }
 
     void Update()
@@ -43,5 +38,15 @@ public class Reticle : MonoBehaviour
         {
             triggerNum++;
         }
+    }
+
+    public void Init ()
+    {
+        reticleSpriteRenderer.color = new Color32(
+            (byte)ParameterManager.tongueColorRed, 
+            (byte)ParameterManager.tongueColorGreen, 
+            (byte)ParameterManager.tongueColorBlue,
+            (byte)ParameterManager.tongueColorAlpha
+        );
     }
 }

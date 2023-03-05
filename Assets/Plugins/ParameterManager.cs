@@ -14,7 +14,7 @@ public class ParameterManager : MonoBehaviour
     public static float tongueSpeed = 0.1f;
 
     public static float flySpeed = 0.005f;
-    public static float appleGravityScale = 0.5f;
+    public static float appleGravityScale = 0.50f;
     public static int flyFrequency = 10; // every 10 sec.
     public static int appleFrequency = 5; // every 10 sec.
 }

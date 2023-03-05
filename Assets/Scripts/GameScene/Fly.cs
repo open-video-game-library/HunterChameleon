@@ -11,7 +11,7 @@ public class Fly : MonoBehaviour
     private string flyType;
     private Vector3 direction;
     
-    private float speed;
+    public float speed;
 
     void Start() 
     {

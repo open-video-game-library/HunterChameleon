@@ -34,6 +34,9 @@ public class TimeKeeper : MonoBehaviour
     [SerializeField]
     private Tongue tongue;
 
+    [SerializeField]
+    private GameObject finishPanel;
+
     void Start()
     {
         isPlaying = false;
@@ -69,6 +72,7 @@ public class TimeKeeper : MonoBehaviour
         bgm.SetActive(false);
         Finish();
         yield return new WaitForSeconds(2);
+        finishPanel.SetActive(true);
         bgm.SetActive(true);
         yield break;
     }
@@ -77,6 +81,7 @@ public class TimeKeeper : MonoBehaviour
     {
         isPlaying = false;
         targetManager.StopSpawn();
+        finishPanel.GetComponent<FinishPanel>().SetResult(score.scoreNum, tongue.hitNum, reticle.triggerNum);
         dataManager.postData(score.scoreNum, tongue.hitNum, reticle.triggerNum);
     }
 }

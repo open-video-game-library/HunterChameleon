@@ -4,24 +4,21 @@ using UnityEngine;
 
 public class TargetManager : MonoBehaviour
 {
-    private float flyFrequency = 10 / ParameterManager.flyFrequency;
-    private float appleFrequency = 10 / ParameterManager.appleFrequency;
+    private float flyFrequency;
+    private float appleFrequency;
 
     [SerializeField]
     private PoolManager flyPool;
     [SerializeField]
     private PoolManager applePool;
 
-    [SerializeField]
-    private GameObject flyPrefab;
-
-    [SerializeField]
-    Vector3 minSpawnPosition = Vector3.zero;
-    [SerializeField]
-    Vector3 maxSpawnPosition = Vector3.zero;
-
     Coroutine flySpawnTimer;
     Coroutine appleSpawnTimer;
+
+    void Start () 
+    {
+        Init();
+    }
 
     public void StartSpawn ()
     {
@@ -39,10 +36,10 @@ public class TargetManager : MonoBehaviour
     {
         while (true)
         {
+            yield return new WaitForSeconds(flyFrequency);
             Destroyer destroyer = flyPool.GetFromPool().GetComponent<Destroyer>();
             destroyer.pool = flyPool;
             destroyer.StartDestroyTimer();
-            yield return new WaitForSeconds(flyFrequency);
         }
     }
 
@@ -50,10 +47,16 @@ public class TargetManager : MonoBehaviour
     {
         while (true)
         {
+            yield return new WaitForSeconds(appleFrequency);
             Destroyer destroyer = applePool.GetFromPool().GetComponent<Destroyer>();
             destroyer.pool = applePool;
             destroyer.StartDestroyTimer();
-            yield return new WaitForSeconds(appleFrequency);
         }
+    }
+
+    public void Init ()
+    {
+        flyFrequency = 10.0f / ParameterManager.flyFrequency;
+        appleFrequency = 10.0f / ParameterManager.appleFrequency;
     }
 }
