@@ -45,7 +45,7 @@ The following parameters can be adjusted on the game.
 
    Default
    - Fly: 5
-   - Apple(gravity scale): 0.50
+   - Apple(gravity scale): 0.5
 
 - Color of chameleon's tongue and the reticle(RGBA)
 
