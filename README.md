@@ -4,7 +4,7 @@
 
 Hunter Chameleonはカメレオンの2Dシューティングゲームです。
 
-ハエやリンゴなど、絶え間なくターゲットが出現するので、カメレオンの舌で撃ち落としましょう。
+絶え間なくターゲットが出現するので、カメレオンの舌で撃ち落としましょう。
 
 ![Hunter Chameleonのキャプチャ画像](https://user-images.githubusercontent.com/52689532/222994483-b0638233-ecbb-4c2f-811d-4c572933444f.png)
 
@@ -13,10 +13,9 @@ Hunter Chameleonはカメレオンの2Dシューティングゲームです。
 
 ### ルール
 
-出現するターゲット（ハエ・リンゴ・ハチ）に照準を合わせて、舌で落としましょう。
+出現するターゲット（ハエ・リンゴ）に照準を合わせて、舌で落としましょう。
 
-カメレオンの胴体にハチかリンゴが当たるとダメージを受けます。
-3回ダメージを受けるとゲームオーバーです。
+カメレオンの胴体にリンゴが当たるとスコアが減ります。
 
 ### 操作方法
 
@@ -33,34 +32,30 @@ Hunter Chamaleonはマウス操作でプレイできます。
 
 以下のパラメータをゲーム画面上で調整できます。
 
-- 制限時間（second）
+- 制限時間（秒）
    - デフォルト値: 30
 
-- 各ターゲットの出現頻度(second/num)
+- 各ターゲットの出現頻度（10秒に何個か）
 
    デフォルト値
+   - ハエ: 10
    - リンゴ: 5
-   - ハチ: 8
-   - ハエ: 2
 
 - 各ターゲットの移動速度
 
    デフォルト値
-   - リンゴ: 0.50(gravity scale)
-   - ハチ: 0.05
-   - ハエ: 0.05
+   - ハエ: 5
+   - リンゴ（重力の度合い）: 0.5
 
-- 各ターゲットと背景のグラフィック（スタンドアロン版のみ）
-
-- 照準の色と形状（スタンドアロン版のみ）
+- カメレオンの下と照準の色（RGBA）
 
 
 ### パラメータ出力機能
 
 以下のパラメータをゲーム終了時にCSVファイルとして出力できます。
 
-- プレイ時間（second）
 - スコア
+- ヒット数
 - ヒット率
 
 ### 研究利用例
@@ -78,7 +73,7 @@ Hunter Chameleonを用いた具体的なケーススタディは、[こちらの
 
 ## 環境
 
-MacOS, Unity 2021.3.9f1
+MacOS, Unity 2021.3.19f1
 
 
 ## インストール方法
@@ -86,7 +81,7 @@ MacOS, Unity 2021.3.9f1
 本リポジトリのデータは下記のコマンドを入力することでローカル環境にクローンできます。
 
 ```bash
-git clone git@github.com:open-video-game-library/Hunter-Chameleon.git
+git clone git@github.com:open-video-game-library/HunterChameleon.git
 ```
 
 
@@ -101,7 +96,7 @@ Hunter Chameleonが動作するために必要なデータはすべて同梱さ�
 
 ## ライセンス
 
-本コンテンツは、[MITライセンス](https://github.com/open-video-game-library/Hunter-Chameleon/blob/main/LICENSE)のもとで利用が許可されています。
+本コンテンツは、[MITライセンス](https://github.com/open-video-game-library/HunterChameleon/blob/main/LICENSE)のもとで利用が許可されています。
 
 
 ## 引用
@@ -126,4 +121,4 @@ Hunter Chameleonが動作するために必要なデータはすべて同梱さ�
 
 ## お問い合わせ
 
-意見や要望、質問などがありましたら、[こちら](https://open-video-game-library.github.io/info/contact/)からお問い合わせ下さい。
+意見や要望、質問などがありましたら、[こちら](https://openvideogame.cc/contact/)からお問い合わせ下さい。
