@@ -78,7 +78,7 @@ For specific case studies using Hunter-Chameleon, please see [this paper](http:/
 
 ## Requirement
 
-MacOS, Unity 2021.3.9f1
+MacOS, Unity 2021.3.19f1
 
 
 ## Installation
@@ -102,6 +102,8 @@ Some of the assets included in the project also include materials provided by ou
 ## License
 
 This content is licensed under the [MIT License](https://github.com/open-video-game-library/HunterChameleon/blob/main/LICENSE).
+
+* No sound files are included in this code because of redistribution.
 
 
 ## Citation
