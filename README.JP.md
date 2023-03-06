@@ -1,12 +1,12 @@
 # Hunter Chameleon
 
-[English version README](https://github.com/open-video-game-library/Hunter-Chameleon/blob/main/README.md)
+[English version README](https://github.com/open-video-game-library/HunterChameleon/blob/main/README.md)
 
 Hunter Chameleonはカメレオンの2Dシューティングゲームです。
 
 ハエやリンゴなど、絶え間なくターゲットが出現するので、カメレオンの舌で撃ち落としましょう。
 
-![Hunter Chameleonのプレイ映像](https://user-images.githubusercontent.com/52689532/196686104-ead98b13-ec54-452c-9c10-f629bb216e5f.gif)
+![Hunter Chameleonのキャプチャ画像](![The image of Hunter Chameleon](https://user-images.githubusercontent.com/52689532/222994483-b0638233-ecbb-4c2f-811d-4c572933444f.png))
 
 
 ## コンテンツ
