@@ -1,6 +1,6 @@
 # Hunter Chameleon
 
-[日本語版README](https://github.com/open-video-game-library/HunterChameleon/blob/main/README.JP.md)
+[日本語版README](https://github.com/open-video-game-library/HunterChameleon/blob/main/README.md)
 
 Hunter Chameleon is a 2D shoot 'em up game of chameleon.
 
