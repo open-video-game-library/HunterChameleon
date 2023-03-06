@@ -1,6 +1,6 @@
 # Hunter Chameleon
 
-[English version README](https://github.com/open-video-game-library/HunterChameleon/blob/main/README.md)
+[English version README](https://github.com/open-video-game-library/HunterChameleon/blob/main/README.EN.md)
 
 Hunter Chameleonはカメレオンの2Dシューティングゲームです。
 
