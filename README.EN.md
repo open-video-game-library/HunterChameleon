@@ -103,7 +103,7 @@ Some of the assets included in the project also include materials provided by ou
 
 This content is licensed under the [MIT License](https://github.com/open-video-game-library/HunterChameleon/blob/main/LICENSE).
 
-* No sound files are included in this code because of redistribution.
+No sound files are included in this code because of redistribution.
 
 
 ## Citation
