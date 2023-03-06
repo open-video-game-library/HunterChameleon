@@ -4,7 +4,7 @@
 
 Hunter Chameleon is a 2D shoot 'em up game of chameleon.
 
-Shoot down flies, apples, and other targets that constantly appear with the chameleon's tongue.
+Shoot down some targets that constantly appear with the chameleon's tongue.
 
 ![The image of Hunter Chameleon](https://user-images.githubusercontent.com/52689532/222994483-b0638233-ecbb-4c2f-811d-4c572933444f.png)
 
@@ -13,10 +13,9 @@ Shoot down flies, apples, and other targets that constantly appear with the cham
 
 ### Rule
 
-Aim at the targets that appear (flies, apples, and bees) and shoot down them with chameleon's tongue.
+Aim at the targets that appear (flies and apples) and shoot down them with chameleon's tongue.
 
-If a bee or an apple hits the chameleon, it will be damaged.
-The game is over when the chameleon is damaged three times.
+If an apple hits the chameleon, the score go down.
 
 ### How to operate
 
@@ -36,32 +35,33 @@ The following parameters can be adjusted on the game.
 - Time limit（second）
    - Default: 30
 
-- Frequency of appearance of each target(second/num)
+- Frequency of appearance of each target(per 10 second)
 
    Default
+   - Fly: 10
    - Apple: 5
-   - Bee: 8
-   - Fly: 2
 
 - Speed of each target
 
    Default
-   - Apple: 0.50(gravity scale)
-   - Bee: 0.05
-   - Fly: 0.05
+   - Fly: 5
+   - Apple(gravity scale): 0.50
 
-- Graphics for background and each target（only standalone）
+- Color of chameleon's tongue and the reticle(RGBA)
 
-- Sight color and shape（only standalone）
-
+   Default
+   - Red: 243
+   - Green: 132
+   - Blue: 229
+   - Alpha: 255
 
 ### Parameter Output Function
 
 The following parameters can be outputted as a CSV file at the end of the game.
 
-- Play time（second）
 - Score
-- Hit rate
+- Number of hits
+- Hit ratio
 
 ### Research Applications
 
@@ -101,7 +101,7 @@ Some of the assets included in the project also include materials provided by ou
 
 ## License
 
-This content is licensed under the [MIT License](https://github.com/open-video-game-library/Hunter-Chameleon/blob/main/LICENSE).
+This content is licensed under the [MIT License](https://github.com/open-video-game-library/HunterChameleon/blob/main/LICENSE).
 
 
 ## Citation
@@ -128,4 +128,4 @@ Design and development of video games aimed at accessible to researchers and sta
 
 ## Contact
 
-If you have any comments, requests or questions, please contact us [here](https://open-video-game-library.github.io/info/contact/).
+If you have any comments, requests or questions, please contact us [here](https://openvideogame.cc/contact/).
