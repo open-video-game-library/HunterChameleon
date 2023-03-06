@@ -6,7 +6,7 @@ Hunter Chameleon is a 2D shoot 'em up game of chameleon.
 
 Shoot down flies, apples, and other targets that constantly appear with the chameleon's tongue.
 
-![Video of Hunter Chameleon](https://user-images.githubusercontent.com/52689532/196686104-ead98b13-ec54-452c-9c10-f629bb216e5f.gif)
+![The image of Hunter Chameleon](https://user-images.githubusercontent.com/52689532/222994483-b0638233-ecbb-4c2f-811d-4c572933444f.png)
 
 
 ## Contents
