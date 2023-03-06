@@ -104,6 +104,8 @@ Hunter Chameleonが動作するために必要なデータはすべて同梱さ�
 
 本コンテンツは、[MITライセンス](https://github.com/open-video-game-library/HunterChameleon/blob/main/LICENSE)のもとで利用が許可されています。
 
+再配布のため、このコードにはBGMや効果音などの音声ファイルは含まれていません。
+
 
 ## 引用
 
