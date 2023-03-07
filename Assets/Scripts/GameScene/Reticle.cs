@@ -9,6 +9,8 @@ public class Reticle : MonoBehaviour
 
     [SerializeField]
     private SpriteRenderer reticleSpriteRenderer;
+    [SerializeField]
+    private SpriteRenderer reticleOutlineSpriteRenderer;
 
     [System.NonSerialized]
     public int triggerNum;
@@ -43,6 +45,12 @@ public class Reticle : MonoBehaviour
     public void Init ()
     {
         reticleSpriteRenderer.color = new Color32(
+            (byte)ParameterManager.tongueColorRed, 
+            (byte)ParameterManager.tongueColorGreen, 
+            (byte)ParameterManager.tongueColorBlue,
+            (byte)ParameterManager.tongueColorAlpha
+        );
+        reticleOutlineSpriteRenderer.color = new Color32(
             (byte)ParameterManager.tongueColorRed, 
             (byte)ParameterManager.tongueColorGreen, 
             (byte)ParameterManager.tongueColorBlue,
