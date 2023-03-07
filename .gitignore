@@ -45,3 +45,6 @@ sysinfo.txt
 .vs
 Release/
 Debug/
+
+# Mac
+.DS_Store
