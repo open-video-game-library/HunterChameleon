@@ -6,7 +6,7 @@ Hunter Chameleonはカメレオンの2Dシューティングゲームです。
 
 絶え間なくターゲットが出現するので、カメレオンの舌で撃ち落としましょう。
 
-![Hunter Chameleonのキャプチャ画像](https://user-images.githubusercontent.com/52689532/222994483-b0638233-ecbb-4c2f-811d-4c572933444f.png)
+![Hunter Chameleonのキャプチャ画像](https://user-images.githubusercontent.com/52689532/223369450-5b382679-08e8-43c9-a6de-0350c3860375.png)
 
 
 ## コンテンツ
