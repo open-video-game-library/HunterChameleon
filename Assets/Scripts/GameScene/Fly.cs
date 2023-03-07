@@ -6,37 +6,38 @@ using UnityEngine.Pool;
 public class Fly : MonoBehaviour
 {
     private string[] flyTypes = {
-        "toLeft", "toRight", "toLeftWave", "toRightWave"
+        "toLeft", "toRight", "toLeftWave", "toRightWave", "toLeftGiza", "toRightGiza"
     };
     private string flyType;
     private Vector3 direction;
-    
-    public int speed;
+
+    private bool isUp = true;
+
+    private Vector3 startingPosition;
 
     void Start() 
     {
-        speed = ParameterManager.flySpeed;
         this.Init();
     }
 
     void LateUpdate()
     {
-        this.transform.localPosition += direction * speed * Time.deltaTime;
+        this.transform.localPosition += direction * ParameterManager.flySpeed * Time.deltaTime;
         if (flyType == "toLeftWave" || flyType == "toRightWave")
         {
             var temp = transform.localPosition;
             temp.y = Mathf.Sin(transform.localPosition.x);
             this.transform.localPosition = temp;
         }
-        // else if (flyType == "toLeftGiza" || flyType == "toRightGiza")
-        // {
-        //     var temp = transform.localPosition;
-        //     if (pos.y + 1 < temp.y) verticalDirection = "down";
-        //     else if (pos.y -1 > temp.y) verticalDirection = "up";
-        //     if (verticalDirection == "up") temp.y += 0.02f;
-        //     else if (verticalDirection == "down") temp.y -= 0.02f;
-        //     transform.localPosition = temp;
-        // }
+        else if (flyType == "toLeftGiza" || flyType == "toRightGiza")
+        {
+            var temp = transform.localPosition;
+            if (startingPosition.y + 1 < temp.y) isUp = false;
+            else if (startingPosition.y -1 > temp.y) isUp = true;
+            if (isUp) temp.y += (ParameterManager.flySpeed / 2) * Time.deltaTime;
+            else temp.y -= (ParameterManager.flySpeed / 2) * Time.deltaTime;
+            this.transform.localPosition = temp;
+        }
 
         if(!TimeKeeper.isPlaying)
         {
@@ -52,7 +53,7 @@ public class Fly : MonoBehaviour
 
     public void Init()
     {
-        Vector3 startingPosition = Vector3.zero;
+        startingPosition = Vector3.zero;
         Vector3 startingScale = this.transform.localScale;
         flyType = flyTypes[Random.Range(0, flyTypes.Length)];
         switch (flyType)

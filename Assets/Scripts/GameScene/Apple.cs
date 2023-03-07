@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class Apple : MonoBehaviour
 {
-    public float gravityScale;
-
     void Start()
     {
-        gravityScale = ParameterManager.appleGravityScale;
         this.Init();
     }
 
@@ -24,7 +21,7 @@ public class Apple : MonoBehaviour
 
     void OnEnable()
     {
-        this.GetComponent<Rigidbody2D>().gravityScale = gravityScale;
+        this.GetComponent<Rigidbody2D>().gravityScale = ParameterManager.appleGravityScale;;
         this.Init();
     }
 

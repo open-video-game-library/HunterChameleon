@@ -24,10 +24,6 @@ public class PauseButton : MonoBehaviour
     [SerializeField]
     private Tongue tongue;
     [SerializeField]
-    private Fly fly;
-    [SerializeField]
-    private Apple apple;
-    [SerializeField]
     private Reticle reticle;
 
     void Start ()
@@ -66,8 +62,5 @@ public class PauseButton : MonoBehaviour
         targetManager.Init();
         tongue.Init();
         reticle.Init();
-
-        fly.speed = ParameterManager.flySpeed;
-        apple.gravityScale = ParameterManager.appleGravityScale;
     }
 }
