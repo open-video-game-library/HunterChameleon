@@ -152,6 +152,6 @@ public class Tongue : MonoBehaviour
             (byte)ParameterManager.tongueColorBlue,
             (byte)ParameterManager.tongueColorAlpha
         );
-        tongueSpeed = ParameterManager.tongueSpeed;
+        tongueSpeed = ParameterManager.tongueSpeed * 10;
     }
 }
