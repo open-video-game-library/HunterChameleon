@@ -42,14 +42,6 @@ public class Tongue : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    void Update()
-    {
-    }
-
-    void LateUpdate()
-    {
-    }
-
     public IEnumerator Shoot(Vector3 triggeredPosition)
     {
         if (!isShooting)
@@ -81,10 +73,11 @@ public class Tongue : MonoBehaviour
                     {
                         isShooting = false;
                         scaleY = 0.5f;
+                        this.transform.localScale = new Vector3(0.5f, scaleY, 0.5f);
                         yield break;
                     }
                 }
-                transform.localScale = new Vector3(0.5f, scaleY, 0.5f);
+                this.transform.localScale = new Vector3(0.5f, scaleY, 0.5f);
                 yield return null;
             }
         }
