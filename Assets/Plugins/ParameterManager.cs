@@ -18,5 +18,5 @@ public class ParameterManager : MonoBehaviour
     public static int flyFrequency = 10; // every 10 sec.
     public static int appleFrequency = 5; // every 10 sec.
 
-    public static float gamepadSensitivity = 0.03f;
+    public static int gamepadSensitivity = 5;
 }

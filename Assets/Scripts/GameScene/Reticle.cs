@@ -18,7 +18,7 @@ public class Reticle : MonoBehaviour
 
     private Vector2 preMousePosition;
 
-    private float gamepadSensitivity;
+    private int gamepadSensitivity;
 
     void Start()
     {
@@ -59,13 +59,13 @@ public class Reticle : MonoBehaviour
             if (gamepadDpad != Vector2.zero)
             {
                 var currentPosition = this.transform.position;
-                this.transform.position = new Vector3(Mathf.Clamp(currentPosition.x + gamepadDpad.x * gamepadSensitivity, -9.0f, 9.0f), Mathf.Clamp(currentPosition.y + gamepadDpad.y * gamepadSensitivity, -3.5f, 5.0f), 1.0f);
+                this.transform.position = new Vector3(Mathf.Clamp(currentPosition.x + gamepadDpad.x * gamepadSensitivity * 2 * Time.deltaTime, -9.0f, 9.0f), Mathf.Clamp(currentPosition.y + gamepadDpad.y * gamepadSensitivity * 2 * Time.deltaTime, -3.5f, 5.0f), 1.0f);
             }
 
             if (gamepadLeftStick != Vector2.zero)
             {
-                var currentPosition = this.transform.position;
-                this.transform.position = new Vector3(Mathf.Clamp(currentPosition.x + gamepadLeftStick.x * gamepadSensitivity, -9.0f, 9.0f), Mathf.Clamp(currentPosition.y + gamepadLeftStick.y * gamepadSensitivity, -3.5f, 5.0f), 1.0f);
+                var currentPosition = this.transform.localPosition;
+                this.transform.localPosition = new Vector3(Mathf.Clamp(currentPosition.x + gamepadLeftStick.x * gamepadSensitivity * 2 * Time.deltaTime, -9.0f, 9.0f), Mathf.Clamp(currentPosition.y + gamepadLeftStick.y * gamepadSensitivity * 2 * Time.deltaTime, -3.5f, 5.0f), 1.0f);
             }
 
             if (gamepadSouthButton.wasPressedThisFrame)
