@@ -23,7 +23,7 @@ Hunter Chamaleon is played with the mouse.
 - Move the mouse: Move the sight
 - Click the left mouse button: Shoot
 
-![Hunter-Chameleonの操作方法](https://user-images.githubusercontent.com/52689532/196676762-4b561a4d-eacf-43a2-9de5-26b8e95a69aa.png)
+![Hunter-Chameleonの操作方法](https://user-images.githubusercontent.com/52689532/224528222-04e48fff-d515-4ee6-a2ee-ff96f1a119fc.png)
 
 
 ## Features
