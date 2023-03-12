@@ -68,7 +68,7 @@ Hunter Chamaleonはマウスまたはゲームパッドの操作でプレイで�
 
    - デフォルト値: 5
    
-   対応しているゲームパッドについては,[こちら](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.5/manual/SupportedDevices.html#gamepads)をご覧ください。
+   対応しているゲームパッドについては、[こちら](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.5/manual/SupportedDevices.html#gamepads)をご覧ください。
 
 
 ### パラメータ出力機能
