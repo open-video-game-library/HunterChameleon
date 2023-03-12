@@ -29,7 +29,7 @@ Hunter Chamaleon is played with a mouse or gamepads.
    - Left stick or D-Pad: Move the reticle
    - Right south button: Shoot
 
-![Hunter-Chameleonの操作方法](https://user-images.githubusercontent.com/52689532/224528222-04e48fff-d515-4ee6-a2ee-ff96f1a119fc.png)
+![Hunter-Chameleonの操作方法](https://user-images.githubusercontent.com/52689532/224528608-c3d93cdd-a2fc-4a7d-8554-fbb5b1a6b995.png)
 
 
 ## Features
