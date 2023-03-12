@@ -60,6 +60,7 @@ The following parameters can be adjusted on the game.
 
 - Gamepad sensitivity
    - Default: 5
+   
    Please check [here](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.5/manual/SupportedDevices.html#gamepads) for supported gamepads.
 
 

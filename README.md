@@ -61,6 +61,7 @@ Hunter Chamaleonはマウス操作でプレイできます。
 - ゲームパッドの操作感度
 
    - デフォルト値: 5
+   
    対応しているゲームパッドについては,[こちら](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.5/manual/SupportedDevices.html#gamepads)をご覧ください。
 
 
