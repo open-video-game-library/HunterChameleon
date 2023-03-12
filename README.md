@@ -19,9 +19,15 @@ Hunter Chameleonはカメレオンの2Dシューティングゲームです。
 
 ### 操作方法
 
-Hunter Chamaleonはマウス操作でプレイできます。
-- マウスの移動 → 照準の移動
-- 左クリック → トリガーを引く
+Hunter Chamaleonはマウスまたはゲームパッドの操作でプレイできます。
+
+- マウス
+   - 移動 → 照準の移動
+   - 左クリック → トリガーを引く
+
+- ゲームパッド
+   - 左スティック or D-Pad → 照準の移動
+   - 右の南ボタン → トリガーを引く
 
 ![Hunter Chameleonの操作方法](https://user-images.githubusercontent.com/52689532/224528222-04e48fff-d515-4ee6-a2ee-ff96f1a119fc.png)
 
