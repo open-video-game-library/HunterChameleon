@@ -104,6 +104,8 @@ git clone git@github.com:open-video-game-library/HunterChameleon.git
 - Input System (version 1.5.0)
 - Universal RP (version 12.1.10)
 
+<img width="798" alt="インポートされたパッケージ一覧" src="https://user-images.githubusercontent.com/52689532/224526382-22179650-5c02-403d-9e13-ac8ff0b16bd5.png">
+
 
 ## 使い方
 
