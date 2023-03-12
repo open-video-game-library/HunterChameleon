@@ -19,9 +19,15 @@ If an apple hits the chameleon, the score go down.
 
 ### How to operate
 
-Hunter Chamaleon is played with the mouse.
-- Move the mouse: Move the sight
-- Click the left mouse button: Shoot
+Hunter Chamaleon is played with a mouse or gamepads.
+
+- Mouse
+   - Move the mouse: Move the reticle
+   - Click the left mouse button: Shoot
+
+- Gamepads
+   - Left stick or D-Pad: Move the reticle
+   - Right south button: Shoot
 
 ![Hunter-Chameleonの操作方法](https://user-images.githubusercontent.com/52689532/224528222-04e48fff-d515-4ee6-a2ee-ff96f1a119fc.png)
 
