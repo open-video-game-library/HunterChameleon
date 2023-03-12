@@ -104,6 +104,9 @@ After the code is clone and Unity is opened in the above requirement, import the
 - Universal RP (version 12.1.10)
 
 
+<img width="798" alt="Imported packages" src="https://user-images.githubusercontent.com/52689532/224526382-22179650-5c02-403d-9e13-ac8ff0b16bd5.png">
+
+
 ## Usage
 
 All the data necessary for Hunter Chameleon to work is included.
