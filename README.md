@@ -86,7 +86,7 @@ Hunter Chamaleonはマウス操作でプレイできます。
 Hunter Chameleonを用いた具体的なケーススタディは、[こちらの論文](http://id.nii.ac.jp/1001/00214482/)をご覧ください。
 
 
-## 環境
+## 要件
 
 MacOS, Unity 2021.3.19f1
 
@@ -98,6 +98,11 @@ MacOS, Unity 2021.3.19f1
 ```bash
 git clone git@github.com:open-video-game-library/HunterChameleon.git
 ```
+
+コードをクローンして上記の要件でUnityを起動した後、以下のパッケージをインポートしてください。
+
+- Input System (version 1.5.0)
+- Universal RP (version 12.1.10)
 
 
 ## 使い方

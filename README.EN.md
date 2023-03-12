@@ -98,6 +98,11 @@ Data in this repository can be cloned to the local environment by entering the f
 git clone git@github.com:open-video-game-library/HunterChameleon.git
 ```
 
+After the code is clone and Unity is opened in the above requirement, import the following packages.
+
+- Input System (version 1.5.0)
+- Universal RP (version 12.1.10)
+
 
 ## Usage
 
