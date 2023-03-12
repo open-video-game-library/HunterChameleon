@@ -1,4 +1,4 @@
-# Hunter Chameleon
+# Hunter Chameleon (version 2.1.0)
 
 [日本語版README](https://github.com/open-video-game-library/HunterChameleon/blob/main/README.md)
 
@@ -35,6 +35,17 @@ The following parameters can be adjusted on the game.
 - Time limit（second）
    - Default: 30
 
+- Chameleon's tongue speed
+   - Default: 8
+
+- Color of chameleon's tongue and the reticle(RGBA)
+
+   Default
+   - Red: 243
+   - Green: 132
+   - Blue: 229
+   - Alpha: 255
+
 - Frequency of appearance of each target(per 10 second)
 
    Default
@@ -47,13 +58,10 @@ The following parameters can be adjusted on the game.
    - Fly: 5
    - Apple(gravity scale): 0.5
 
-- Color of chameleon's tongue and the reticle(RGBA)
+- Gamepad sensitivity
+   - Default: 5
+   Please check [here](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.5/manual/SupportedDevices.html#gamepads) for supported gamepads.
 
-   Default
-   - Red: 243
-   - Green: 132
-   - Blue: 229
-   - Alpha: 255
 
 ### Parameter Output Function
 

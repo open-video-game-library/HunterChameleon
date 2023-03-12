@@ -1,4 +1,4 @@
-# Hunter Chameleon
+# Hunter Chameleon (version 2.1.0)
 
 [English version README](https://github.com/open-video-game-library/HunterChameleon/blob/main/README.EN.md)
 
@@ -35,6 +35,17 @@ Hunter Chamaleonはマウス操作でプレイできます。
 - 制限時間（秒）
    - デフォルト値: 30
 
+- カメレオンの舌のスピード
+   - デフォルト値: 8
+
+- カメレオンの下と照準の色（RGBA）
+
+   デフォルト値
+   - Red: 243
+   - Green: 132
+   - Blue: 229
+   - Alpha: 255
+
 - 各ターゲットの出現頻度（10秒に何個か）
 
    デフォルト値
@@ -47,13 +58,10 @@ Hunter Chamaleonはマウス操作でプレイできます。
    - ハエ: 5
    - リンゴ（重力の度合い）: 0.5
 
-- カメレオンの下と照準の色（RGBA）
+- ゲームパッドの操作感度
 
-   デフォルト値
-   - Red: 243
-   - Green: 132
-   - Blue: 229
-   - Alpha: 255
+   - デフォルト値: 5
+   対応しているゲームパッドについては,[こちら](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.5/manual/SupportedDevices.html#gamepads)をご覧ください。
 
 
 ### パラメータ出力機能
