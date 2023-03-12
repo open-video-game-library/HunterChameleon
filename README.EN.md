@@ -95,7 +95,7 @@ MacOS, Unity 2021.3.19f1
 Data in this repository can be cloned to the local environment by entering the following command.
 
 ```bash
-git clone git@github.com:open-video-game-library/Hunter-Chameleon.git
+git clone git@github.com:open-video-game-library/HunterChameleon.git
 ```
 
 
