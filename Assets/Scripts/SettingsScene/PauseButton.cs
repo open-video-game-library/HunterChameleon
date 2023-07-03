@@ -37,22 +37,51 @@ public class PauseButton : MonoBehaviour
     {
         if(isPausing)
         {
-            Cursor.visible = false;
             Init();
             TimeKeeper.isPlaying = true;
             isPausing = false;
             this.gameObject.GetComponent<Image>().sprite = buttonSprites[1];
             parameterPanel.SetActive(false);
             targetManager.StartSpawn();
+
+            reticle.UseCursor(false);
+        }
+        else
+        {
+            TimeKeeper.isPlaying = false;
+            isPausing = true;
+            this.gameObject.GetComponent<Image>().sprite = buttonSprites[0];
+            parameterPanel.SetActive(true);
+            targetManager.StopSpawn();
+
+            reticle.UseCursor(true);
+        }
+    }
+
+    public void OnClickSprite()
+    {
+        if (isPausing)
+        {
+            Cursor.visible = false;
+            Init();
+            TimeKeeper.isPlaying = true;
+            isPausing = false;
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = buttonSprites[1];
+            parameterPanel.SetActive(false);
+            targetManager.StartSpawn();
+
+            reticle.UseCursor(false);
         }
         else
         {
             Cursor.visible = true;
             TimeKeeper.isPlaying = false;
             isPausing = true;
-            this.gameObject.GetComponent<Image>().sprite = buttonSprites[0];
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = buttonSprites[0];
             parameterPanel.SetActive(true);
             targetManager.StopSpawn();
+
+            reticle.UseCursor(true);
         }
     }
 

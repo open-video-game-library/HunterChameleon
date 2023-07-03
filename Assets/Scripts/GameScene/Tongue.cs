@@ -87,10 +87,10 @@ public class Tongue : MonoBehaviour
     {
         GameObject collidedObject = collision.gameObject;
 
-        if(collidedObject.activeSelf && collidedObject.CompareTag("Target"))
+        if (collidedObject.activeSelf && collidedObject.CompareTag("Target"))
         {
             hitNum++;
-            
+
             Vector3 collidedPosition = collidedObject.transform.position;
             collidedPosition.z = 1.0f;
 
@@ -105,12 +105,12 @@ public class Tongue : MonoBehaviour
             {
                 float distance = Vector3.Distance(shotPosition, collidedPosition);
 
-                if(distance < 1.0f)
+                if (distance < 1.0f)
                 {
                     judge.GetComponent<SpriteRenderer>().sprite = judges[1];
                     audioSource.PlayOneShot(achieveSound);
                 }
-                else if (distance < 5.0f) 
+                else if (distance < 5.0f)
                 {
                     judge.GetComponent<SpriteRenderer>().sprite = judges[2];
                 }
@@ -118,14 +118,14 @@ public class Tongue : MonoBehaviour
                 {
                     judge.GetComponent<SpriteRenderer>().sprite = judges[3];
                 }
-                
+
                 audioSource.PlayOneShot(hitSound);
                 score.AddScore(300);
                 collidedObject.GetComponent<Destroyer>().pool.ReleaseToPool(collidedObject);
             }
 
             if (collidedObject.name.Contains("Apple"))
-            {            
+            {
                 judge.GetComponent<SpriteRenderer>().sprite = judges[0];
 
                 audioSource.PlayOneShot(hitSound);
@@ -133,6 +133,11 @@ public class Tongue : MonoBehaviour
                 score.AddScore(500);
                 collidedObject.GetComponent<Destroyer>().pool.ReleaseToPool(collidedObject);
             }
+        }
+
+        if (collidedObject.activeSelf && collidedObject.CompareTag("Pause"))
+        {
+            collidedObject.GetComponent<PauseButton>().OnClickSprite();
         }
     }
 

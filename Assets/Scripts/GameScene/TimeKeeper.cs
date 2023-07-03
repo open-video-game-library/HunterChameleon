@@ -45,7 +45,8 @@ public class TimeKeeper : MonoBehaviour
         StartCoroutine(StartCountDown());
 
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
+        reticle.UseCursor(false);
     }
 
     private IEnumerator StartCountDown ()
@@ -84,6 +85,7 @@ public class TimeKeeper : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        reticle.UseCursor(true);
 
         isPlaying = false;
         targetManager.StopSpawn();
