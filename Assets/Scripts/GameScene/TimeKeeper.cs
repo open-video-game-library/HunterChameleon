@@ -43,6 +43,9 @@ public class TimeKeeper : MonoBehaviour
         playTime = ParameterManager.playTime;
         countDownText = countDown.GetComponent<TextMeshProUGUI>();
         StartCoroutine(StartCountDown());
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private IEnumerator StartCountDown ()
@@ -79,6 +82,9 @@ public class TimeKeeper : MonoBehaviour
 
     private void Finish()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         isPlaying = false;
         targetManager.StopSpawn();
         finishPanel.GetComponent<FinishPanel>().SetResult(score.scoreNum, tongue.hitNum, reticle.triggerNum);
