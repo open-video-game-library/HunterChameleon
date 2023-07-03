@@ -19,4 +19,5 @@ public class ParameterManager : MonoBehaviour
     public static int appleFrequency = 5; // every 10 sec.
 
     public static int gamepadSensitivity = 5;
+    public static int mouseSensitivity = 5;
 }

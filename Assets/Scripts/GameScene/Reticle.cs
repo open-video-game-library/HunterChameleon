@@ -19,26 +19,44 @@ public class Reticle : MonoBehaviour
     private Vector2 preMousePosition;
 
     private int gamepadSensitivity;
+    private int mouseSensitivity;
 
     void Start()
     {
-        Cursor.visible = false;
         this.Init();
         preMousePosition = (Mouse.current).position.ReadValue();
     }
 
+    Vector2 vec;
+    bool once;
+
     void Update()
     {
+
         if (Mouse.current != null)
         {
             var mouseInput = Mouse.current;
             var mouseLeftButton = mouseInput.leftButton;
             var mousePosition = mouseInput.position.ReadValue();
 
-            if (preMousePosition != mousePosition)
+            vec += new Vector2(mouseInput.delta.ReadValue().x * 0.002f * mouseSensitivity, mouseInput.delta.ReadValue().y * 0.002f * mouseSensitivity);
+
+            if (Cursor.visible == true)
             {
-                var cursorPosition = Camera.main.ScreenToWorldPoint(mouseInput.position.ReadValue());
-                this.transform.position = new Vector3(Mathf.Clamp(cursorPosition.x, -9.0f, 9.0f), Mathf.Clamp(cursorPosition.y, -3.5f, 5.0f), 1.0f);
+                if (preMousePosition != mousePosition)
+                {
+                    var cursorPosition = Camera.main.ScreenToWorldPoint(mouseInput.position.ReadValue());
+                    this.transform.position = new Vector3(Mathf.Clamp(cursorPosition.x, -9.0f, 9.0f), Mathf.Clamp(cursorPosition.y, -3.5f, 5.0f), 1.0f);
+                }
+            }
+            else
+            {
+                if (preMousePosition != mousePosition)
+                {
+                    var cursorPosition = vec;
+                    this.transform.position = new Vector3(Mathf.Clamp(cursorPosition.x, -9.0f, 9.0f), Mathf.Clamp(cursorPosition.y, -3.5f, 5.0f), 1.0f);
+                }
+                Mouse.current.WarpCursorPosition(new Vector2(this.transform.position.x, this.transform.position.y));
             }
 
             if (mouseLeftButton.wasPressedThisFrame)
@@ -89,6 +107,7 @@ public class Reticle : MonoBehaviour
     public void Init ()
     {
         gamepadSensitivity = ParameterManager.gamepadSensitivity;
+        mouseSensitivity = ParameterManager.mouseSensitivity;
         reticleSpriteRenderer.color = new Color32(
             (byte)ParameterManager.tongueColorRed, 
             (byte)ParameterManager.tongueColorGreen, 
