@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class Reticle : MonoBehaviour
 {
@@ -28,10 +29,34 @@ public class Reticle : MonoBehaviour
     }
 
     Vector2 vec;
-    bool once;
+    private bool useMouse = true;
+
+    [SerializeField] TextMeshProUGUI debugText;
+
+    public void UseCursor(bool enable)
+    {
+        if (enable) //use cursor
+        {
+            useMouse = true;
+
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            useMouse = false;
+            Cursor.visible = false;
+            var mouseInput = Mouse.current;
+            var mousePosition = mouseInput.position.ReadValue();
+            var cursorPosition = Camera.main.ScreenToWorldPoint(mouseInput.position.ReadValue());
+            this.transform.position = new Vector3(Mathf.Clamp(cursorPosition.x, -9.0f, 9.0f), Mathf.Clamp(cursorPosition.y, -3.5f, 5.0f), 1.0f);
+        }
+    }
 
     void Update()
     {
+
+        Cursor.visible = true;
 
         if (Mouse.current != null)
         {
@@ -39,9 +64,9 @@ public class Reticle : MonoBehaviour
             var mouseLeftButton = mouseInput.leftButton;
             var mousePosition = mouseInput.position.ReadValue();
 
-            vec += new Vector2(mouseInput.delta.ReadValue().x * 0.002f * mouseSensitivity, mouseInput.delta.ReadValue().y * 0.002f * mouseSensitivity);
+            
 
-            if (Cursor.visible == true)
+            if (useMouse)
             {
                 if (preMousePosition != mousePosition)
                 {
@@ -51,12 +76,11 @@ public class Reticle : MonoBehaviour
             }
             else
             {
-                if (preMousePosition != mousePosition)
-                {
-                    var cursorPosition = vec;
-                    this.transform.position = new Vector3(Mathf.Clamp(cursorPosition.x, -9.0f, 9.0f), Mathf.Clamp(cursorPosition.y, -3.5f, 5.0f), 1.0f);
-                }
-                Mouse.current.WarpCursorPosition(new Vector2(this.transform.position.x, this.transform.position.y));
+                Screen.lockCursor = true;
+                var cursorPosition = this.transform.position
+                        + new Vector3(mouseInput.delta.ReadValue().x * 0.002f * mouseSensitivity, mouseInput.delta.ReadValue().y * 0.002f * mouseSensitivity, 0f);
+                this.transform.position = new Vector3(Mathf.Clamp(cursorPosition.x, -9.0f, 9.0f), Mathf.Clamp(cursorPosition.y, -3.5f, 5.0f), 1.0f);
+                
             }
 
             if (mouseLeftButton.wasPressedThisFrame)
@@ -91,6 +115,13 @@ public class Reticle : MonoBehaviour
                 this.trigger();
             }
         }
+
+        if (debugText != null)
+        {
+
+            debugText.text = Cursor.lockState.ToString();
+        }
+
     }
 
     private void trigger ()
