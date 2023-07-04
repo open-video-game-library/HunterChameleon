@@ -46,17 +46,12 @@ public class Reticle : MonoBehaviour
         {
             useMouse = false;
             Cursor.visible = false;
-            var mouseInput = Mouse.current;
-            var mousePosition = mouseInput.position.ReadValue();
-            var cursorPosition = Camera.main.ScreenToWorldPoint(mouseInput.position.ReadValue());
-            this.transform.position = new Vector3(Mathf.Clamp(cursorPosition.x, -9.0f, 9.0f), Mathf.Clamp(cursorPosition.y, -3.5f, 5.0f), 1.0f);
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
     void Update()
     {
-
-        Cursor.visible = true;
 
         if (Mouse.current != null)
         {
@@ -76,7 +71,6 @@ public class Reticle : MonoBehaviour
             }
             else
             {
-                Screen.lockCursor = true;
                 var cursorPosition = this.transform.position
                         + new Vector3(mouseInput.delta.ReadValue().x * 0.002f * mouseSensitivity, mouseInput.delta.ReadValue().y * 0.002f * mouseSensitivity, 0f);
                 this.transform.position = new Vector3(Mathf.Clamp(cursorPosition.x, -9.0f, 9.0f), Mathf.Clamp(cursorPosition.y, -3.5f, 5.0f), 1.0f);

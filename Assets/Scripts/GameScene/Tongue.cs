@@ -139,6 +139,11 @@ public class Tongue : MonoBehaviour
         {
             collidedObject.GetComponent<PauseButton>().OnClickSprite();
         }
+
+        if (collidedObject.activeSelf && collidedObject.CompareTag("Start"))
+        {
+            collidedObject.GetComponent<AwakeTimeKeeper>().OnClickStart();
+        }
     }
 
     private float GetAngle(Vector2 from, Vector2 to)
