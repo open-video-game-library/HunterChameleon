@@ -30,7 +30,6 @@ public class PauseButton : MonoBehaviour
     {
         isPausing = true;
         pauseButton.onClick.AddListener(OnClicked);
-        Cursor.visible = true;
     }
 
     void OnClicked () 
@@ -62,7 +61,6 @@ public class PauseButton : MonoBehaviour
     {
         if (isPausing)
         {
-            Cursor.visible = false;
             Init();
             TimeKeeper.isPlaying = true;
             isPausing = false;
@@ -74,7 +72,6 @@ public class PauseButton : MonoBehaviour
         }
         else
         {
-            Cursor.visible = true;
             TimeKeeper.isPlaying = false;
             isPausing = true;
             this.gameObject.GetComponent<SpriteRenderer>().sprite = buttonSprites[0];

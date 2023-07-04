@@ -39,14 +39,15 @@ public class TimeKeeper : MonoBehaviour
 
     void Start()
     {
+        reticle.UseCursor(false);
+    }
+
+    public void GameStart()
+    {
         isPlaying = false;
         playTime = ParameterManager.playTime;
         countDownText = countDown.GetComponent<TextMeshProUGUI>();
         StartCoroutine(StartCountDown());
-
-        Cursor.visible = false;
-        //Cursor.lockState = CursorLockMode.Locked;
-        reticle.UseCursor(false);
     }
 
     private IEnumerator StartCountDown ()
@@ -83,8 +84,6 @@ public class TimeKeeper : MonoBehaviour
 
     private void Finish()
     {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
         reticle.UseCursor(true);
 
         isPlaying = false;

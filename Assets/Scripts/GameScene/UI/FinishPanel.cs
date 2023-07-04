@@ -14,7 +14,7 @@ public class FinishPanel : MonoBehaviour
 
     void OnEnable ()
     {
-        Cursor.visible = true;
+        //Cursor.visible = true;
     }
 
     public void SetResult (float scoreNum, float hitNum, float triggerNum)
