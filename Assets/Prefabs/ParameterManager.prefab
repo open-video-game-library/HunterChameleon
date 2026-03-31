@@ -1,0 +1,195 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2749509138465719119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6554741289592932546}
+  - component: {fileID: 1672408742151030193}
+  m_Layer: 0
+  m_Name: ParameterManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6554741289592932546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2749509138465719119}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1672408742151030193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2749509138465719119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ce664ef4b70f84c80556a42f1f1c0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parameter:
+    chameleon:
+      tongueColor:
+        serializedVersion: 2
+        rgba: 4293231859
+      hitRadiusMultiplier: 1.5
+      rootWidth: 0.6
+      tipWidth: 0.12
+      tipNearScale: 0.15
+      tipFarScale: 0.08
+      extendTime: 0
+      retractTime: 0.3
+    reticle:
+      reticleColors:
+      - color:
+          serializedVersion: 2
+          rgba: 4293231859
+      - color:
+          serializedVersion: 2
+          rgba: 4293231859
+    inGame:
+      playTime: 45
+      alartRemainingTime: 15
+      sunColors:
+      - serializedVersion: 2
+        rgba: 184549130
+      - serializedVersion: 2
+        rgba: 343998463
+      - serializedVersion: 2
+        rgba: 511738111
+      - serializedVersion: 2
+        rgba: 1677721600
+    target:
+      apple:
+        speed: {x: 0, y: -9.8}
+        animationSpeed: 1
+        size: 0.8
+        enableSpawn: 1
+        spawnFrequency: 2
+        spawnRange: 0.8
+        isReward: 1
+        canCollide: 0
+        baseScore: 200
+        collideScore: -200
+      goldApple:
+        speed: {x: 0, y: -14.7}
+        animationSpeed: 1
+        size: 0.6
+        enableSpawn: 1
+        spawnFrequency: 9
+        spawnRange: 0.9
+        isReward: 1
+        canCollide: 0
+        baseScore: 1000
+        collideScore: -200
+      poisonApple:
+        speed: {x: 0, y: -9.8}
+        animationSpeed: 1
+        size: 0.8
+        enableSpawn: 1
+        spawnFrequency: 7
+        spawnRange: 0.8
+        isReward: 0
+        canCollide: 0
+        baseScore: -500
+        collideScore: -200
+      fly:
+        speed: {x: 5, y: 2}
+        animationSpeed: 1
+        size: 1
+        enableSpawn: 1
+        spawnFrequency: 1
+        spawnRange: 0.5
+        isReward: 1
+        canCollide: 0
+        baseScore: 100
+        collideScore: -100
+      goldFly:
+        speed: {x: 7.5, y: 3}
+        animationSpeed: 1
+        size: 0.8
+        enableSpawn: 1
+        spawnFrequency: 7
+        spawnRange: 0.6
+        isReward: 1
+        canCollide: 0
+        baseScore: 800
+        collideScore: -100
+      poisonFly:
+        speed: {x: 5, y: 2}
+        animationSpeed: 1
+        size: 1.5
+        enableSpawn: 1
+        spawnFrequency: 5
+        spawnRange: 0.5
+        isReward: 0
+        canCollide: 0
+        baseScore: -300
+        collideScore: -100
+    scorePopup:
+      rewardDisplayColor:
+        serializedVersion: 2
+        rgba: 4279506175
+      penaltyDisplayColor:
+        serializedVersion: 2
+        rgba: 4294901760
+      comboBonusDisplayColor:
+        serializedVersion: 2
+        rgba: 4278203135
+    combo:
+      comboCountLimit: 8
+      comboTimeLimit: 3
+    rank:
+      scoreRanks:
+      - rankLabel: S
+        scoreThreshold: 0.65
+        displayColor:
+          serializedVersion: 2
+          rgba: 4284134655
+      - rankLabel: A
+        scoreThreshold: 0.55
+        displayColor:
+          serializedVersion: 2
+          rgba: 4278196735
+      - rankLabel: B
+        scoreThreshold: 0.35
+        displayColor:
+          serializedVersion: 2
+          rgba: 4294929920
+      - rankLabel: C
+        scoreThreshold: 0.2
+        displayColor:
+          serializedVersion: 2
+          rgba: 4281515520
+      - rankLabel: D
+        scoreThreshold: -1e+20
+        displayColor:
+          serializedVersion: 2
+          rgba: 4290035200
+    input:
+      sensitivity: 30
+    seed:
+      seed: 0
+    audio:
+      masterVolume: 1
+      bgmVolume: 0.8
+      seVolume: 1
+      defaultPitchVariance: 0
+  frameRate: 60

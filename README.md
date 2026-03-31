@@ -93,7 +93,7 @@ For specific case studies using Hunter-Chameleon, please see [this paper](http:/
 
 ## Requirement
 
-MacOS, Unity 2021.3.19f1
+Unity2022.3.24f1
 
 
 ## Installation

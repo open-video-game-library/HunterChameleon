@@ -1,0 +1,249 @@
+{
+    "chameleon": {
+        "tongueColor": {
+            "r": 243,
+            "g": 132,
+            "b": 229,
+            "a": 255
+        },
+        "hitRadiusMultiplier": 1.5,
+        "rootWidth": 0.6000000238418579,
+        "tipWidth": 0.11999999731779099,
+        "tipNearScale": 0.15000000596046449,
+        "tipFarScale": 0.07999999821186066,
+        "extendTime": 0.0,
+        "retractTime": 0.30000001192092898
+    },
+    "reticle": {
+        "reticleColors": [
+            {
+                "color": {
+                    "r": 243,
+                    "g": 132,
+                    "b": 229,
+                    "a": 255
+                }
+            },
+            {
+                "color": {
+                    "r": 243,
+                    "g": 132,
+                    "b": 229,
+                    "a": 255
+                }
+            }
+        ]
+    },
+    "inGame": {
+        "playTime": 45,
+        "alartRemainingTime": 15,
+        "sunColors": [
+            {
+                "r": 10,
+                "g": 255,
+                "b": 255,
+                "a": 10
+            },
+            {
+                "r": 255,
+                "g": 255,
+                "b": 128,
+                "a": 20
+            },
+            {
+                "r": 255,
+                "g": 128,
+                "b": 128,
+                "a": 30
+            },
+            {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 100
+            }
+        ]
+    },
+    "target": {
+        "apple": {
+            "speed": {
+                "x": 0.0,
+                "y": -9.800000190734864
+            },
+            "animationSpeed": 1.0,
+            "size": 0.800000011920929,
+            "enableSpawn": true,
+            "spawnFrequency": 2.0,
+            "spawnRange": 0.800000011920929,
+            "isReward": true,
+            "canCollide": false,
+            "baseScore": 200.0,
+            "collideScore": -200.0
+        },
+        "goldApple": {
+            "speed": {
+                "x": 0.0,
+                "y": -14.699999809265137
+            },
+            "animationSpeed": 1.0,
+            "size": 0.6000000238418579,
+            "enableSpawn": true,
+            "spawnFrequency": 9.0,
+            "spawnRange": 0.8999999761581421,
+            "isReward": true,
+            "canCollide": false,
+            "baseScore": 1000.0,
+            "collideScore": -200.0
+        },
+        "poisonApple": {
+            "speed": {
+                "x": 0.0,
+                "y": -9.800000190734864
+            },
+            "animationSpeed": 1.0,
+            "size": 0.800000011920929,
+            "enableSpawn": true,
+            "spawnFrequency": 7.0,
+            "spawnRange": 0.800000011920929,
+            "isReward": false,
+            "canCollide": false,
+            "baseScore": -500.0,
+            "collideScore": -200.0
+        },
+        "fly": {
+            "speed": {
+                "x": 5.0,
+                "y": 2.0
+            },
+            "animationSpeed": 1.0,
+            "size": 1.0,
+            "enableSpawn": true,
+            "spawnFrequency": 1.0,
+            "spawnRange": 0.5,
+            "isReward": true,
+            "canCollide": false,
+            "baseScore": 100.0,
+            "collideScore": -100.0
+        },
+        "goldFly": {
+            "speed": {
+                "x": 7.5,
+                "y": 3.0
+            },
+            "animationSpeed": 1.0,
+            "size": 0.800000011920929,
+            "enableSpawn": true,
+            "spawnFrequency": 7.0,
+            "spawnRange": 0.6000000238418579,
+            "isReward": true,
+            "canCollide": false,
+            "baseScore": 800.0,
+            "collideScore": -100.0
+        },
+        "poisonFly": {
+            "speed": {
+                "x": 5.0,
+                "y": 2.0
+            },
+            "animationSpeed": 1.0,
+            "size": 1.5,
+            "enableSpawn": true,
+            "spawnFrequency": 5.0,
+            "spawnRange": 0.5,
+            "isReward": false,
+            "canCollide": false,
+            "baseScore": -300.0,
+            "collideScore": -100.0
+        }
+    },
+    "scorePopup": {
+        "rewardDisplayColor": {
+            "r": 255,
+            "g": 20,
+            "b": 20,
+            "a": 255
+        },
+        "penaltyDisplayColor": {
+            "r": 0,
+            "g": 0,
+            "b": 255,
+            "a": 255
+        },
+        "comboBonusDisplayColor": {
+            "r": 255,
+            "g": 50,
+            "b": 0,
+            "a": 255
+        }
+    },
+    "combo": {
+        "comboCountLimit": 8,
+        "comboTimeLimit": 3.0
+    },
+    "rank": {
+        "scoreRanks": [
+            {
+                "rankLabel": "S",
+                "scoreThreshold": 0.6499999761581421,
+                "displayColor": {
+                    "r": 255,
+                    "g": 180,
+                    "b": 90,
+                    "a": 255
+                }
+            },
+            {
+                "rankLabel": "A",
+                "scoreThreshold": 0.550000011920929,
+                "displayColor": {
+                    "r": 255,
+                    "g": 25,
+                    "b": 0,
+                    "a": 255
+                }
+            },
+            {
+                "rankLabel": "B",
+                "scoreThreshold": 0.3499999940395355,
+                "displayColor": {
+                    "r": 0,
+                    "g": 110,
+                    "b": 255,
+                    "a": 255
+                }
+            },
+            {
+                "rankLabel": "C",
+                "scoreThreshold": 0.20000000298023225,
+                "displayColor": {
+                    "r": 0,
+                    "g": 190,
+                    "b": 50,
+                    "a": 255
+                }
+            },
+            {
+                "rankLabel": "D",
+                "scoreThreshold": -100000002004087730000.0,
+                "displayColor": {
+                    "r": 0,
+                    "g": 190,
+                    "b": 180,
+                    "a": 255
+                }
+            }
+        ]
+    },
+    "input": {
+        "sensitivity": 30.0
+    },
+    "seed": {
+        "seed": 0.0
+    },
+    "audio": {
+        "masterVolume": 1.0,
+        "bgmVolume": 0.800000011920929,
+        "seVolume": 1.0,
+        "defaultPitchVariance": 0.0
+    }
+}

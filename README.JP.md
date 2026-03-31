@@ -94,7 +94,7 @@ Hunter Chameleonを用いた具体的なケーススタディは、[こちらの
 
 ## 要件
 
-MacOS, Unity 2021.3.19f1
+Unity2022.3.24f1
 
 
 ## インストール方法
